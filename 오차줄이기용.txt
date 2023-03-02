@@ -1,0 +1,9 @@
+mae epochs 400 : 4.0073676
+mae hidden layer(40,5,3):3.9977913
+
+
+
+mae epochs 400 hidden layer(40,5,5):6.0018153
+
+mae epochs 400 batch_size 32 hidden layer(10,5,1):20.005705
+mse epochs 600 batch_size 32 hidden layer(10,20,1):20.008747
