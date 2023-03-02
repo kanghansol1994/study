@@ -1,0 +1,38 @@
+keras03_deep2
+mae epochs 400 : 4.0073676
+mae hidden layer(3,40,5,3):3.9977913
+
+
+keras04
+mae epochs 400 hidden layer(3,40,5,5):6.0018153
+
+keras05_batch
+mae epochs 400 batch_size 32 hidden layer(3,10,5,1):20.005705
+mse epochs 600 batch_size 32 hidden layer(3,10,20,1):20.008747
+
+keras07_mlp.4(y=1개)
+mse epochs 400 batch_size 3 hidden layer(3,5,4,3):9.999983
+mse epochs 600 batch_size 5 hidden layer(3,50,4,3):9.996124
+mse epochs 500 batch_size 4 hidden layer(3,50,4,3):9.999985
+mse epochs 500 batch_size 10 hidden layer(3,50,4,3):9.993125
+mse epochs 500 batch_size 16 hidden layer(3,5,35,3):9.999953
+
+keras07_mlp5(y=2개)
+mse epochs 400 batch_size 3 hidden layer(3,50,4,3):10.000003, 1.89999935
+mse epochs 400 batch_size 5 hidden layer(3,50,4,3):9.999997, 1.8999944
+mse epochs 400 batch_size 10 hidden layer(3,50,80,50):9.999998, 1.8999957
+mse epochs 600 batch_size 16 hidden layer(3,50,80,50):9.993511, 1.9014225
+mse epochs 600 batch_size 32 hidden layer(3,50,80,40):9.999974, 1.9000521
+mse epochs 500 batch_size 32 hidden layer(3,50,80,40):9.999912, 1.8995404
+
+keras07_mlp7(x=1개 y=3개)
+mse epochs 400 batch_size 5 hidden layer(3,40,5,3):10.000005,1.9,-0.0000009
+mse epochs 500 batch_size 5 hidden layer(3,40,5,3,):10.000001,1.8999997,0.000003
+
+keras08_train_test
+mse epochs 400 batch_size 3 hidden layer(14):10.999861
+mse epochs 500 batch_size 4 hidden layer(14):11.
+
+keras08_train_test3
+mse epochs 200 batch_size 4 hidden layer(1): 11.
+                                                                   
