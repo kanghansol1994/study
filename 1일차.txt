@@ -1,17 +1,25 @@
-pip install 프로그램명:프로그램 다운로드
-컨트롤+Z:실행한 프로그램 종료
-컨트롤+S:저장 단축키
-컨트롤+/:주석달기(#)(코드에서 실행되지 않고 설명)
-import:포함시키기
-epochs:수행횟수
-fit:훈련
-optimizer:최적화
-" ":안에 있는 내용 그대로 출력
-F2:파일명 변경
-anaconda:파이썬 설치 프로그램
-visual studio code:설치 프로그램
+
+인공지능 --> 최적의 weight / 최소의 loss
+
+컨트롤+Z : 실행한 프로그램 종료
+컨트롤+S : 저장 단축키
+컨트롤+/ : 주석달기(#)(코드에서 실행되지 않고 설명)
+F2 : 파일명 변경
+" " : 안에 있는 내용 그대로 출력
+
+y = wx+b (일차함수)
+
+pip install 프로그램명 : 프로그램 다운로드
+
+anaconda : 파이썬 설치 프로그램
 -python extension pack설치
 -python 설치
 -python extended 설치
-인공지능:최적의 weight 최소의 loss
-y=wx+b(일차함수)
+
+visual studio code : 설치 프로그램
+
+import : 포함시키기
+epochs : 수행횟수
+fit : 훈련
+optimizer : 최적화
+
