@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense
 from sklearn.metrics import accuracy_score
-
+from keras.utils import to_categorical
 #1. 데이터
 datasets = load_wine()
 print(datasets.DESCR)
@@ -17,7 +17,7 @@ print(x.shape, y.shape) #(178, 13) (178, )
 print(x)
 print(y)
 print('y의 라벨값 : ', np.unique(y)) #y의 라벨값 :  [0 1 2]
-y=pd.get_dummies(y)
+y = to_categorical(y)
 print(y.shape)
 
 x_train, x_test, y_train, y_test = train_test_split(
@@ -46,7 +46,7 @@ es = EarlyStopping(monitor='var_loss', patience=10, mode='min',
                    verbose=1,
                    restore_best_weights=True
                    )
-model.fit(x_train, y_train, epochs=500, batch_size=2,
+model.fit(x_train, y_train, epochs=10, batch_size=2,
           validation_split=0.2,
           verbose=1,
           callbacks=[es]
@@ -56,8 +56,13 @@ model.fit(x_train, y_train, epochs=500, batch_size=2,
 results = model.evaluate(x_test, y_test)
 print('results : ', results)
 
-y_predict = np.round(model.predict(x_test))
-from sklearn.metrics import r2_score, accuracy_score
-acc = accuracy_score(y_test, y_predict)
+y_predict = model.predict(x_test)
+print(y_predict.shape)
+y_predict = np.argmax(y_predict, axis=-1)
+print(y_predict.shape)
+
+y_true = np.argmax(y_test, axis=-1)
+
+acc = accuracy_score(y_true, y_predict)
 print('acc : ', acc)
 #results :[0.1261221170425415, 0.9722222089767456]
