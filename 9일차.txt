@@ -1,0 +1,10 @@
+pip uninstall scikit-learn #지우기
+pip install scikit=learn==1.2.0 #깔기
+normalization: 정규화 (스케일링 기법 x만 해줌) (트레인과 테스트로 나눈 후 변환)
+변경 했을때 동일한 비율로 변경됨
+훈련데이터만 정규화 함  훈련데이터의 범위에 맞춰 테스트데이터와 예측데이터 변환
+그래서 평가데이터는 어긋날수 있음.
+[과제]MinMaxScaler,StandardScaler,MaxAbsScaler,RobustScaler 공부하고 일요일 과제에 같이 넣기 (하나당 3줄정도)
+3가지 원핫인코딩 방식 자기 스스로 파일에 정리
+캐글,데이콘 submit 제출 한거 제출 수 보이게 스크린샷 찍어서 보내기
+

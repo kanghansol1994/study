@@ -1,0 +1,17 @@
+[과제]리스트,딕셔너리,튜플 공부하고 선생님한테 보내기
+ex) [1,2,3,4,5] , ['qkqh', 'qkqh', '안바보'] #리스트 예시 대괄호로 되어있음 2개이상은 리스트
+ex){'data' :} 키 벨류 형태로 적혀있는 책, 키와 벨류로 한쌍으로 되어있음 중괄호로 되어있음  #딕셔너리 예시
+
+이진분류와 다중분류
+이진분류는 마지막 레이어 activation =sigmoid 사용 loss= crossentropy 사용
+model.compile 에 metrics 추가하여 보고 싶은 항목 추가
+
+다중분류는 마지막 레이어 activation = softmax 사용
+acc는 더 높고 loss와 var_loss r2스코어 는 다 낮았으나 점수는 더 낮게 나옴 평가기준은acc였음
+원 핫 인코딩을 통해 라벨값만큼 만들어줌  loss는 categorical_crossentropy
+를 통해 비교하여 값을 낸다.
+
+회귀 loss는 mse,mae 최종layer linear 원핫사용x 최종layer 노드갯수는 y의컬럼의갯수만큼
+이진분류 loss는 binery_crossentropy 최종layer sigmoid 원핫사용x 1개
+다중분류 loss는 categorical_crossentropy 최종layer softmax 원핫사용o y의값(라벨,클래스)
+의 갯수만큼
