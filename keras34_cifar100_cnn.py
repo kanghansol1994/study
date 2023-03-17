@@ -4,7 +4,7 @@ from tensorflow.python.keras.layers import Dense, Conv2D, Flatten,MaxPooling2D
 import numpy as np
 from sklearn.metrics import r2_score, accuracy_score
 from sklearn.preprocessing import MinMaxScaler
-from keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 #1.데이터
 (x_train,y_train), (x_test, y_test) = cifar100.load_data()
 
@@ -26,11 +26,11 @@ print(y_train.shape) #(50000,100)
 
 #2. 모델
 model = Sequential()
-model.add(Conv2D(64,5, padding='same', activation='relu', input_shape=(32, 32, 3))),
+model.add(Conv2D(64,3, padding='same', activation='relu', input_shape=(32, 32, 3))),
 model.add(MaxPooling2D())
-model.add(Conv2D(128,5, padding='same', activation='relu')),
+model.add(Conv2D(128,3, padding='same', activation='relu')),
 model.add(MaxPooling2D())
-model.add(Conv2D(128,5 , padding='same', activation='relu')),
+model.add(Conv2D(128,3 , padding='same', activation='relu')),
 model.add(Flatten())
 model.add(Dense(64, activation='relu')),
 model.add(Dense(100, activation='softmax'))
@@ -46,7 +46,7 @@ es = EarlyStopping(monitor='val_acc', patience=10, mode='max',
 
 model.fit(x_train, y_train, epochs=100, batch_size=128, verbose=1,
                  validation_split=0.1, callbacks=[es])
-model.save('./_save/MCP/cifar100/_save_model.h1')
+model.save('./_save/MCP/cifar100/_save_model.h1/')
 
 #4. 평가, 예측
 loss = model.evaluate(x_test,y_test)
