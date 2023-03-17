@@ -35,4 +35,12 @@ mse epochs 500 batch_size 4 hidden layer(14):11.
 
 keras08_train_test3
 mse epochs 200 batch_size 4 hidden layer(1): 11.
-                                                                   
+mse epochs 400 batch_size 5 hidden layer(110): 10.99946
+
+R2
+mae epochs 400 batch_size 2 hidden layer(50,50,50,20) train_size 0.8 random_state 928
+:0.99478406
+
+727 825 928 1013 44 1157 1214 1324 2536 456 15210
+0.9 : 6,31,47,58,63,64,83,106,115,123,141,169,172,177,194,195,
+204,209,228,286,291,325,329,335,354,350,359
